@@ -115,6 +115,7 @@ from .risk_scorer import register_tools as register_risk_scorer
 from .runtime_logs_tool import register_tools as register_runtime_logs
 from .salesforce_tool import register_tools as register_salesforce
 from .sap_tool import register_tools as register_sap
+from .savvycal_tool import register_tools as register_savvycal
 from .serpapi_tool import register_tools as register_serpapi
 from .shopify_tool import register_tools as register_shopify
 from .slack_tool import register_tools as register_slack
@@ -185,6 +186,7 @@ def _register_verified(
     register_apollo(mcp, credentials=credentials)
     register_bigquery(mcp, credentials=credentials)
     register_calcom(mcp, credentials=credentials)
+    register_savvycal(mcp, credentials=credentials)
     register_calendar(mcp, credentials=credentials)
     register_discord(mcp, credentials=credentials)
     register_exa_search(mcp, credentials=credentials)
@@ -278,6 +280,7 @@ def _register_unverified(
     register_brevo(mcp, credentials=credentials)
     register_bigquery(mcp, credentials=credentials)
     register_calcom(mcp, credentials=credentials)
+    register_savvycal(mcp, credentials=credentials)
     register_razorpay(mcp, credentials=credentials)
     register_serpapi(mcp, credentials=credentials)
     register_vision(mcp, credentials=credentials)

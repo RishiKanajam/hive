@@ -65,6 +65,7 @@ class TestHealthCheckerRegistry:
             "brave_search",
             "brevo",
             "calcom",
+            "savvycal",
             "calendly_pat",
             "cloudflare",
             "discord",

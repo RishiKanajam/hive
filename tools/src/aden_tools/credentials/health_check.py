@@ -1075,6 +1075,14 @@ class CalcomHealthChecker(BaseHttpHealthChecker):
     AUTH_QUERY_PARAM_NAME = "apiKey"
 
 
+class SavvycalHealthChecker(BaseHttpHealthChecker):
+    """Health checker for SavvyCal API key."""
+
+    ENDPOINT = "https://api.savvycal.com/v1/me"
+    SERVICE_NAME = "SavvyCal"
+    AUTH_TYPE = BaseHttpHealthChecker.AUTH_BEARER
+
+
 class SerpApiHealthChecker(BaseHttpHealthChecker):
     """Health checker for SerpAPI key."""
 
@@ -1319,6 +1327,7 @@ HEALTH_CHECKERS: dict[str, CredentialHealthChecker] = {
     "brave_search": BraveSearchHealthChecker(),
     "brevo": BrevoHealthChecker(),
     "calcom": CalcomHealthChecker(),
+    "savvycal": SavvycalHealthChecker(),
     "calendly_pat": CalendlyHealthChecker(),
     "cloudflare": CloudflareHealthChecker(),
     "discord": DiscordHealthChecker(),
